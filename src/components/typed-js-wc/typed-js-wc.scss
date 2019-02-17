@@ -1,0 +1,13 @@
+/* Component styles go here */
+div {
+  ::slotted(*) {
+    display: var(--display, inline);
+  }
+  span {
+    color: var(--color, inherited);
+    font: var(--font, inherited);
+    font-size: var(--font-size, inherited);
+    font-weight: var(--font-weight, inherited);
+    font-family: var(--font-family, inherited);
+  }
+}

@@ -12,58 +12,38 @@ import '@stencil/core';
 
 export namespace Components {
 
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
+  interface TypedJsWc {
+    'options': any;
+    'strings': string;
   }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
+  interface TypedJsWcAttributes extends StencilHTMLAttributes {
+    'options'?: any;
+    'strings'?: string;
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'MyComponent': Components.MyComponent;
+    'TypedJsWc': Components.TypedJsWc;
   }
 
   interface StencilIntrinsicElements {
-    'my-component': Components.MyComponentAttributes;
+    'typed-js-wc': Components.TypedJsWcAttributes;
   }
 
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLTypedJsWcElement extends Components.TypedJsWc, HTMLStencilElement {}
+  var HTMLTypedJsWcElement: {
+    prototype: HTMLTypedJsWcElement;
+    new (): HTMLTypedJsWcElement;
   };
 
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement
+    'typed-js-wc': HTMLTypedJsWcElement
   }
 
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'typed-js-wc': HTMLTypedJsWcElement;
   }
 
 

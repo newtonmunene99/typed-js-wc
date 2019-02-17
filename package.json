@@ -1,7 +1,7 @@
 {
   "name": "typed-js-wc",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "This is a web component that types. Enter in any string, and watch it type at the speed you've set, backspace what it's typed, and begin a new sentence for however many strings you've set.",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
   "unpkg": "dist/ionic.js",
@@ -16,7 +16,15 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
-  "dependencies": {},
+  "author": "newtonmunene99",
+  "bugs": {
+    "url": "https://github.com/newtonmunene99/typed-js-wc/issues"
+  },
+  "homepage": "https://github.com/newtonmunene99/typed-js-wc#readme",
+  "dependencies": {
+    "@stencil/sass": "^0.1.1",
+    "typed.js": "^2.0.10"
+  },
   "devDependencies": {
     "@stencil/core": "~0.16.2"
   },

@@ -1,13 +1,15 @@
-import { Config } from '@stencil/core';
+import { Config } from "@stencil/core";
+import { sass } from "@stencil/sass";
 
 export const config: Config = {
-  namespace: 'mycomponent',
-  outputTargets:[
-    { type: 'dist' },
-    { type: 'docs' },
+  namespace: "typedjswc",
+  outputTargets: [
+    { type: "dist" },
+    { type: "docs" },
     {
-      type: 'www',
+      type: "www",
       serviceWorker: null // disable service workers
     }
-  ]
+  ],
+  plugins: [sass()]
 };
