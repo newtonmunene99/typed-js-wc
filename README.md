@@ -32,13 +32,13 @@ To have some fixed text add a HTML Element with a `slot` property and it's value
 
 ```html
 <typed-js-wc strings="String number 1, String number 2">
-  <h1 slot="fixed">Fixed</h1>
+  <h1 slot="fixed">I'm fixed text</h1>
 </typed-js-wc>
 ```
 
 ---
 
-For additional configuration, see the options [here](https://github.com/mattboldt/typed.js#customization) then pass an `options` property. It should be an object with any of the options defined in the link above.
+For additional configuration, see the options at [https://github.com/mattboldt/typed.js#customization](https://github.com/mattboldt/typed.js#customization) then pass an `options` property. It should be an object with any of the options defined in the link above.
 
 For vanilla/plain html users the best way would be to give the component a proper selector e.g an ID then use JS to pass `options`.
 
@@ -47,9 +47,7 @@ For vanilla/plain html users the best way would be to give the component a prope
 </typed-js-wc>
 
 <script>
-    document.getElementById("exampleID").options = {           typeSpeed: 40,
-    startDelay: 0
-    };
+    document.getElementById("exampleID").options = {typeSpeed: 40, startDelay: 0};
 <script>
 ```
 
