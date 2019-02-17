@@ -1,126 +1,72 @@
-# wc-typed-js - The Typed.js Web Component
+![Built With Stencil](https://img.shields.io/badge/-Built%20With%20Stencil-16161d.svg?logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjIuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIgNTEyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI%2BCjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI%2BCgkuc3Qwe2ZpbGw6I0ZGRkZGRjt9Cjwvc3R5bGU%2BCjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik00MjQuNywzNzMuOWMwLDM3LjYtNTUuMSw2OC42LTkyLjcsNjguNkgxODAuNGMtMzcuOSwwLTkyLjctMzAuNy05Mi43LTY4LjZ2LTMuNmgzMzYuOVYzNzMuOXoiLz4KPHBhdGggY2xhc3M9InN0MCIgZD0iTTQyNC43LDI5Mi4xSDE4MC40Yy0zNy42LDAtOTIuNy0zMS05Mi43LTY4LjZ2LTMuNkgzMzJjMzcuNiwwLDkyLjcsMzEsOTIuNyw2OC42VjI5Mi4xeiIvPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNDI0LjcsMTQxLjdIODcuN3YtMy42YzAtMzcuNiw1NC44LTY4LjYsOTIuNy02OC42SDMzMmMzNy45LDAsOTIuNywzMC43LDkyLjcsNjguNlYxNDEuN3oiLz4KPC9zdmc%2BCg%3D%3D&colorA=16161d&style=flat-square)
 
-[![npm](https://img.shields.io/npm/v/wc-typed-js.svg) ![npm](https://img.shields.io/npm/dm/wc-typed-js.svg)](https://www.npmjs.com/package/wc-typed-js)
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/owner/wc-typed-js)
+# Stencil Component Starter
 
-<!--
-```
-<custom-element-demo>
-  <template>
-    <link rel="import" href="index.html">
-  </template>
-</custom-element-demo>
-```
--->
-```html
-<wc-typed-js strings="Text number 1, Text number 2">
-  <h1>Fixed Text: <span class="typing"></span></h1>  
-</wc-typed-js>
-```
+This is a starter project for building a standalone Web Component using Stencil.
 
-The Typed.js Web Component for better reusability.
+Stencil is also great for building entire apps. For that, use the [stencil-app-starter](https://github.com/ionic-team/stencil-app-starter) instead.
 
-Typed.js is a library that types. Enter in any string, and watch it type at the speed you've set, backspace what it's typed, and begin a new sentence for however many strings you've set.
+# Stencil
 
-Checkout the offical project [here](https://github.com/mattboldt/typed.js/).
+Stencil is a compiler for building fast web apps using Web Components.
 
-## Table of contents
+Stencil combines the best concepts of the most popular frontend frameworks into a compile-time rather than run-time tool.  Stencil takes TypeScript, JSX, a tiny virtual DOM layer, efficient one-way data binding, an asynchronous rendering pipeline (similar to React Fiber), and lazy-loading out of the box, and generates 100% standards-based Web Components that run in any browser supporting the Custom Elements v1 spec.
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Example](#example)
+Stencil components are just Web Components, so they work in any major framework or with no framework at all.
 
-# Installation
+## Getting Started
 
-```
-npm install --save wc-typed-js
+To start building a new web component using Stencil, clone this repo to a new directory:
+
+```bash
+git clone https://github.com/ionic-team/stencil-component-starter.git my-component
+cd my-component
+git remote rm origin
 ```
 
-## Default import
+and run:
 
-Import the component:
-
-```javascript
-import { TypedJS } from 'wc-typed-js'
+```bash
+npm install
+npm start
 ```
 
-## Browser import
+To build the component for production, run:
 
-```html
-<script type="module" src="dist/main.js" crossorigin></script>
+```bash
+npm run build
 ```
 
-# Usage
-To get started simply add the `wc-typed-js` custom element to your `markup` and pass the text, which should be typed to the `strings` property. In addition you need to pass an element with the class `typing` to the slot, which will be used as a `wrapper`.
+To run the unit tests for the components, run:
 
-Minimal setup:
-
-```html
-<wc-typed-js strings="First text, Second Text">
-  <h1 class="typing"></h1>
-</wc-typed-js>
+```bash
+npm test
 ```
 
-The `typing` class also allows you to just animate certain parts of a string:
-```html
-<wc-typed-js strings="John', 'James">
-  <h1>Hey <span class="typing"></span></h1>
-</wc-typed-js>
-```
+Need help? Check out our docs [here](https://stenciljs.com/docs/my-first-component).
 
-## Properties
-You can make use of the following properties in order to customize your typing expirience:
 
-| Property             | Type    | Description                                                          | Usage                                                           |
-|----------------------|---------|----------------------------------------------------------------------|-----------------------------------------------------------------|
-| strings              | String   | strings to be typed                                                  | `strings="Text 1, Text 2"` |
-| stringsElement       | String  | ID of element containing string children                             | `stringsElement="'myId'"`                                                                |
-| typeSpeed            | Number  | type speed in milliseconds                                           | `typeSpeed="50"`                                                                |
-| startDelay           | Number  | time before typing starts in milliseconds                            | `startDelay="1000"`                                                                |
-| backSpeed            | Number  | backspacing speed in milliseconds                                    | `backSpeed="10"`                                                                |
-| smartBackspace       | Boolean | only backspace what doesn't match the previous string                | `smartBackspace="true"`                                                                |
-| shuffle              | Boolean | shuffle the strings                                                  | `shuffle="true"`                                                                |
-| backDelay            | Number  | time before backspacing in milliseconds                              | `backDelay="100"`                                                                |
-| fadeOut              | Boolean | Fade out instead of backspace                                        | `fadeOut="true"`                                                                |
-| fadeOutClass         | String  | css class for fade animation                                         | `fadeOutClass="'fadeOutClass'"`                                                                |
-| fadeOutDelay         | Boolean | fade out delay in milliseconds                                       | `fadeOutDelay="true"`                                                                |
-| loop                 | Boolean | loop strings                                                         | `loop="true"`                                                                |
-| loopCount            | Number  | amount of loops                                                      | `loopCount="3"`                                                                |
-| showCursor           | Boolean | show cursor                                                          | `showCursor="true"`                                                                |
-| cursorChar           | String  | character for cursor                                                 | `cursorChar="'_'"`                                                                |
-| autoInsertCss        | Boolean | insert CSS for cursor and fadeOut into HTML                          | `autoInsertCss="true"`                                                                |
-| attr                 | String  | attribute for typing Ex: input placeholder, value, or just HTML text | `attr="'placeholder'"`                                                                |
-| bindInputFocusEvents | Boolean | bind to focus and blur if el is text input                           | `bindInputFocusEvents="true"`                                                                |
-| contentType          | String  | 'html' or 'null' for plaintext                                       | `contentType="'html'"`                                                                |
+## Naming Components
 
-## Events
-Not implemented so far.
+When creating new component tags, we recommend _not_ using `stencil` in the component name (ex: `<stencil-datepicker>`). This is because the generated component has little to nothing to do with Stencil; it's just a web component!
 
-## Features
-Checkout features like `type pausing`, `smart backspacing` etc. on the libraries [page](https://github.com/mattboldt/typed.js/).
+Instead, use a prefix that fits your company or any name for a group of related components. For example, all of the Ionic generated web components use the prefix `ion`.
 
-# Examples
-Here are several examples:
 
-```html
-<!-- infinite loop -->
-<wc-typed-js strings="awesome, brilliant" loop="true">
-  <h2>We are a <span class="typing"></span> company!</h2>
-</wc-typed-js>
+## Using this component
 
-<!-- type pausing -->
-<wc-typed-js strings="This is text ^1000 which gets paused for 1 second, wow, interesting">
-  <h2 class="typing"></h2>
-</wc-typed-js>
+### Script tag
 
-<!-- output html -->
-<wc-typed-js strings="<p>Paragraph</p>, <span>Span</span>" contentType="'html'">
-  <h2 class="typing"></h2>
-</wc-typed-js>
-```
+- [Publish to NPM](https://docs.npmjs.com/getting-started/publishing-npm-packages)
+- Put a script tag similar to this `<script src='https://unpkg.com/my-component@0.0.1/dist/mycomponent.js'></script>` in the head of your index.html
+- Then you can use the element anywhere in your template, JSX, html etc
 
----
+### Node Modules
+- Run `npm install my-component --save`
+- Put a script tag similar to this `<script src='node_modules/my-component/dist/mycomponent.js'></script>` in the head of your index.html
+- Then you can use the element anywhere in your template, JSX, html etc
 
-# License
-
-[MIT](http://opensource.org/licenses/MIT)
+### In a stencil-starter app
+- Run `npm install my-component --save`
+- Add an import to the npm packages `import my-component;`
+- Then you can use the element anywhere in your template, JSX, html etc
