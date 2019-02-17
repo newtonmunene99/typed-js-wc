@@ -1,6 +1,6 @@
 {
   "name": "typed-js-wc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is a web component that types. Enter in any string, and watch it type at the speed you've set, backspace what it's typed, and begin a new sentence for however many strings you've set.",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
