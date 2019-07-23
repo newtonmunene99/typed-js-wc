@@ -2,13 +2,17 @@
   "name": "typed-js-wc",
   "version": "1.1.1",
   "description": "This is a web component that types. Enter in any string, and watch it type at the speed you've set, backspace what it's typed, and begin a new sentence for however many strings you've set.",
-  "module": "dist/index.mjs",
   "main": "dist/index.js",
-  "unpkg": "dist/ionic.js",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/typedjswc/typedjswc.js",
   "files": [
-    "dist/"
+    "dist/",
+    "loader/"
   ],
   "scripts": {
     "build": "stencil build --docs",

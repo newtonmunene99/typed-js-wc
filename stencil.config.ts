@@ -4,7 +4,7 @@ import { sass } from "@stencil/sass";
 export const config: Config = {
   namespace: "typedjswc",
   outputTargets: [
-    { type: "dist" },
+    { type: "dist", esmLoaderPath: "../loader" },
     { type: "docs-readme" },
     {
       type: "www",
