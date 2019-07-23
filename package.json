@@ -2,7 +2,7 @@
   "name": "typed-js-wc",
   "version": "1.0.1",
   "description": "This is a web component that types. Enter in any string, and watch it type at the speed you've set, backspace what it's typed, and begin a new sentence for however many strings you've set.",
-  "module": "dist/esm/index.js",
+  "module": "dist/index.mjs",
   "main": "dist/index.js",
   "unpkg": "dist/ionic.js",
   "types": "dist/types/components.d.ts",
@@ -22,11 +22,11 @@
   },
   "homepage": "https://github.com/newtonmunene99/typed-js-wc#readme",
   "dependencies": {
-    "@stencil/sass": "^0.1.1",
+    "@stencil/sass": "^1.0.1",
     "typed.js": "^2.0.10"
   },
   "devDependencies": {
-    "@stencil/core": "~0.16.2"
+    "@stencil/core": "1.1.9"
   },
   "license": "MIT"
 }
