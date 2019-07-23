@@ -5,7 +5,7 @@ export const config: Config = {
   namespace: "typedjswc",
   outputTargets: [
     { type: "dist" },
-    { type: "docs" },
+    { type: "docs-readme" },
     {
       type: "www",
       serviceWorker: null // disable service workers

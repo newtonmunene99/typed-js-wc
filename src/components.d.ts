@@ -5,31 +5,17 @@
  */
 
 
-import '@stencil/core';
-
-
+import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-
   interface TypedJsWc {
     'options': any;
     'strings': string;
   }
-  interface TypedJsWcAttributes extends StencilHTMLAttributes {
-    'options'?: any;
-    'strings'?: string;
-  }
 }
 
 declare global {
-  interface StencilElementInterfaces {
-    'TypedJsWc': Components.TypedJsWc;
-  }
-
-  interface StencilIntrinsicElements {
-    'typed-js-wc': Components.TypedJsWcAttributes;
-  }
 
 
   interface HTMLTypedJsWcElement extends Components.TypedJsWc, HTMLStencilElement {}
@@ -37,22 +23,29 @@ declare global {
     prototype: HTMLTypedJsWcElement;
     new (): HTMLTypedJsWcElement;
   };
-
   interface HTMLElementTagNameMap {
-    'typed-js-wc': HTMLTypedJsWcElement
-  }
-
-  interface ElementTagNameMap {
     'typed-js-wc': HTMLTypedJsWcElement;
   }
-
-
-  export namespace JSX {
-    export interface Element {}
-    export interface IntrinsicElements extends StencilIntrinsicElements {
-      [tagName: string]: any;
-    }
-  }
-  export interface HTMLAttributes extends StencilHTMLAttributes {}
-
 }
+
+declare namespace LocalJSX {
+  interface TypedJsWc extends JSXBase.HTMLAttributes<HTMLTypedJsWcElement> {
+    'options'?: any;
+    'strings'?: string;
+  }
+
+  interface IntrinsicElements {
+    'typed-js-wc': TypedJsWc;
+  }
+}
+
+export { LocalJSX as JSX };
+
+
+declare module "@stencil/core" {
+  export namespace JSX {
+    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
+  }
+}
+
+
