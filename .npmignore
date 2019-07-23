@@ -3,3 +3,4 @@ src/
 .stencil/
 www/
 .editorconfig
+tsconfig.json
